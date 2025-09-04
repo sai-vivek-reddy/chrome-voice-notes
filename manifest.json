@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Voice Notes",
+  "version": "1.0",
+  "description": "Record voice notes using speech recognition",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Voice Notes"
+  },
+  "commands": {
+    "toggle-recording": {
+      "suggested_key": {
+        "default": "Alt+Shift+S",
+        "mac": "Alt+Shift+S"
+      },
+      "description": "Toggle voice recording"
+    }
+  }
+}
